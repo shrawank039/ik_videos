@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimaryDark">#dddee3</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDarkMenu">#FFFFFF</color>
+    <color name="colorPrimarybg">#dddee3</color>
+
+    <color name="primary_text">#212121</color>
+
+    <color name="colorAccent">#212121</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_white">#d4d4d4</color>
+    <color name="pruple">#a905b6</color>
+    <color name="green">#00b341</color>
+    <color name="red">#ec302b</color>
+    <color name="blue">#2984fc</color>
+    <color name="black">#000000</color>
+    <color name="gray_color">#ccc</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="primary_text_light">#606060</color>
+    <color name="transparent">#00000000</color>
+    <color name="dark_gray">#9c9c9c</color>
+    <array name="dot_colors">
+        <item>#03A9F4</item>
+        <item>#E65100</item>
+        <item>#FFBB00</item>
+    </array>
+
+    <color name="waveform_selected">#33b5e5</color>
+    <color name="waveform_unselected">#195a72</color>
+    <color name="waveform_unselected_bkgnd_overlay">#0a242d</color>
+    <color name="selection_border">#ffffff</color>
+    <color name="playback_indicator">#ffff66</color>
+    <color name="grid_line">#66ffffff</color>
+    <color name="timecode">#ddffffdd</color>
+    <color name="timecode_shadow">#aa000000</color>
+
+    <color name="type_bkgnd_alarm">#88880000</color>
+    <color name="type_bkgnd_ringtone">#88008888</color>
+    <color name="type_bkgnd_notification">#88666600</color>
+    <color name="type_bkgnd_music">#88000000</color>
+    <color name="type_bkgnd_unsupported">#88cccccc</color>
+
+</resources>

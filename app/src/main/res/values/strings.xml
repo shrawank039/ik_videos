@@ -1,0 +1,411 @@
+<resources>
+    <string name="app_name">IK Videos</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string-array name="payments_methodes">
+        <item>PayTm</item>
+        <item>Phone Pay</item>
+        <item>Google Pay</item>
+        <item>Paypal</item>
+    </string-array>
+    <string name="facebook_app_id">179436866467900</string>
+    <string name="fb_login_protocol_scheme">fb179436866467900</string>
+
+
+    <string name="NATIVE_ADS_TYPE">both</string> <!-- facebook/admob/both -->
+
+    <string name="policy_privacy_url">http://virmana.com/privacy_policy.html</string>
+    <string name="my_google_play">https://play.google.com/store/apps/dev?id=76837857188</string>
+
+    <!-- Admob Published For GDPR -->
+    <string name="publisher_id">pub-5346519350843195</string>
+    <string name="app_id">ca-app-pub-5346519350843195~9477353127</string>
+
+
+    <string name="AD_MOB_TIME">15</string>
+    <string name="ad_unit_id_interstitial">ca-app-pub-5346519350843195/1349583104</string>
+    <string name="ad_unit_id_banner">ca-app-pub-5346519350843195/2662664772</string>
+    <string name="ad_unit_id_native">ca-app-pub-5346519350843195/5938251722</string>
+
+
+    <!-- FACEBOOK ADS -->
+    <string name="FACEBOOK_ADS_NATIVE_BANNER_PLACEMENT_ID">1097010150675274_1097015677341388</string>
+    <string name="FACEBOOK_ADS_NATIVE_PLACEMENT_ID">1097010150675274_1097015677341388</string>
+    <!-- enable / disbale NATIVE BANNER -->
+
+    <string name="FACEBOOK_ADS_ENABLED_BANNER">true</string>
+    <!-- enable / disbale NATIVE ADS BETWEEN ITEM -->
+    <string name="FACEBOOK_ADS_ENABLED_NATIVE">true</string>
+    <!-- NUMBER OF WALLPAPER BETWEEN ADS -->
+    <string name="NATIVE_ADS_ITEM_BETWWEN_ADS">2</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <array name="colors_load">
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+    </array>
+
+    <array name="colors_load_img">
+        <item>@color/black</item>
+        <item>@color/dark_gray</item>
+    </array>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="action_infos"><![CDATA[Report bug & Help]]></string>
+    <string name="error_short_value">Your field is too short</string>
+    <string name="error_mail_valide">Please enter a valid E-mail</string>
+    <string name="message_sended">Message has been sent successfully</string>
+    <string name="progress_login">Work in progress</string>
+    <string name="policy_privacy">Policy privacy</string>
+    <string name="action_rate">Rate App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="language_label">Choose your languages</string>
+    <string name="loading_language">Loading Languages …</string>
+    <string name="error_server">Check your internet connexion</string>
+    <string name="try_again">Try again</string>
+    <string name="favorite">Favorite</string>
+    <string name="download">Download</string>
+    <string name="share">Share</string>
+    <string name="copy">Copy</string>
+    <string name="more_status">MORE STATUS</string>
+    <string name="permission_desc">Now we need your permission to continue use the application perfectly</string>
+    <string name="permission_title">Everything is okey</string>
+    <string name="menu_popular">Popular</string>
+    <string name="menu_latest">Latest</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="edit_text_upload_title_error">Title very short , please a write correct title</string>
+    <string name="image_upload_error">Please select an image</string>
+    <string name="video_upload_error">Please select an image</string>
+    <string name="gif_upload_error">Please select an image</string>
+    <string name="image_upload_success">Your image has been successfully uploaded</string>
+    <string name="video_upload_success">Your video has been successfully uploaded</string>
+    <string name="joke_upload_success">Your Joke has been successfully added</string>
+    <string name="status_upload_success">Your Status has been successfully added</string>
+    <string name="status_copied_success">Your Status has been successfully copied</string>
+    <string name="gif_upload_success">Your GIF has been successfully added</string>
+    <string name="no_connexion">Connection problem</string>
+    <string name="retry">Retry</string>
+    <string name="upload_gif">Record Video</string>
+    <string name="please_login">Login to your account</string>
+    <string name="welcome_login">Login to use More</string>
+    <string name="welcome_login_text">Login to upload , image ,video ....</string>
+    <string name="operation_progress">Operation in progress</string>
+    <string name="account_disabled">Sorry your account has been locked</string>
+    <string name="login_gg_text">Login with google</string>
+    <string name="message_logout">You are successfully logout</string>
+    <string name="more_jokes">MORE JOKES</string>
+    <string name="more_images">MORE IMAGES</string>
+    <string name="more_gifs">MORE GIFS</string>
+    <string name="more_videos">MORE VIDEOS</string>
+    <string name="update_now">Update Now</string>
+    <string name="exit">Exit</string>
+    <string name="go_pro">GO PRO</string>
+    <string name="hint_message">Your message</string>
+    <string name="send_support">Send Message</string>
+    <string name="hint_email">E-mail</string>
+    <string name="hint_name">Full name</string>
+    <string name="about_us">About us</string>
+    <string name="version_label">Version</string>
+    <string name="title_notification">Enable push notifiction</string>
+    <string name="label_notification">Receive push notification</string>
+    <string name="clear_cache">Clear Cache</string>
+    <string name="label_cache">Clear locally cached statuses. Currently : </string>
+    <string name="contact_us">Contact us</string>
+
+    <string name="download_more_from_link">Get more from == http://google.com ==</string>
+    <string name="upload_video">Upload Video</string>
+
+    <string name="share_as_image">Share \n as image</string>
+    <string name="share_as_text">Share \n as text</string>
+    <string name="copy_status">Copy \n status</string>
+    <string name="add_to_favorite">Add to \n favorites</string>
+    <string name="copy_joke">Copy \n  Joke</string>
+    <string name="comment">Comment</string>
+    <string name="write_comment">Write comment</string>
+    <string name="comment_hidden">Comment Hidden</string>
+    <string name="now_time">Now</string>
+    <string name="all_categories">Show all</string>
+    <string name="all_categories_gif">All Gifs Categories</string>
+    <string name="all_categories_video">All statuses Categories</string>
+    <string name="all_categories_status">All Status Categories</string>
+    <string name="all_categories_jokes">All Joke Categories</string>
+    <string name="all_categories_images">All Images categories</string>
+
+    <string name="loading">Loading</string>
+    <string name="invalide_url">Invalide Url</string>
+    <string name="loading_user_data">Loading user data</string>
+    <string name="edit_my_profile">Edit my profile</string>
+
+    <string name="hint_facebook">Facebook url</string>
+    <string name="hint_twitter">Twitter url</string>
+    <string name="hint_instragram">Instagram Url</string>
+    <string name="save">Save</string>
+    <string name="menu_me">Me</string>
+    <string name="comments">  Comments</string>
+    <array name="autosize_text_sizes">
+        <item>10sp</item>
+        <item>12sp</item>
+        <item>20sp</item>
+        <item>40sp</item>
+        <item>100sp</item>
+    </array>
+    <string name="skip">Skip</string>
+    <string name="rate_our_app">Rate Our App</string>
+    <string name="rate_our_app_message">If you love our application ,please take a moment to rate it .</string>
+    <string name="rate_now">Rate Now</string>
+    <string name="later">Later</string>
+    <string name="no_again">Don’t ask again</string>
+    <string name="description_subsribte">With our pack. You can enjoy an ad-free experience . and focus on the  essential!</string>
+    <string name="select_language">Select your Languages</string>
+    <string name="on_review">On review</string>
+
+    <string name="title_slide_1">Welcome to Status And statuses App</string>
+    <string name="description_slide_1">Thank you for download Status And statuses App ,Enjoy with this Amazing andoid app with cool features .</string>
+
+    <string name="title_slide_2">Earn Money by Using App</string>
+    <string name="description_slide_2">Earn money by share and watch videos,gifs,image,status and invite your frients to join us</string>
+
+    <string name="title_slide_3">Be Creative </string>
+    <string name="description_slide_3">Register now and share you creative idea with many users and be one of our community .</string>
+
+    <string name="title_slide_4">Download and share</string>
+    <string name="description_slide_4">Dwonload Any content and keep it on your device to watch it on offline mode , and share it with your frients  </string>
+
+    <string name="title_slide_5">Favorites</string>
+    <string name="description_slide_5">Create your favorite list and save any content to view it later . </string>
+
+    <string name="title_slide_6">Give your Reactions </string>
+    <string name="description_slide_6">Browse best status collection  and give your reaction like,love, haha , lool , angry …</string>
+
+    <string name="title_slide_8">Take your freedom</string>
+    <string name="description_slide_8">Subscribe with a small price , and take your freedom by remove all ads .</string>
+
+    <string name="share_this_app">Share this App</string>
+    <string name="images_downloaded">Video has been downloaded successfully</string>
+    <string name="twitter_not_installed">Twitter have not been installed</string>
+    <string name="app_not_installed">No App installed</string>
+    <string name="share_via">Shared via</string>
+    <string name="downloading">Downloading</string>
+    <string name="instagram_not_installed">Instagram have not been installed</string>
+    <string name="hike_not_installed">Hike have not been installed</string>
+    <string name="snapchat_not_installed">Snapshat have not been installed</string>
+    <string name="messenger_not_installed">Messenger have not been installed</string>
+    <string name="facebook_not_installed">Facebook have not been installed</string>
+    <string name="whatsapp_not_installed">Whatsapp have not been installed</string>
+    <string name="download_failed">Download failed! Please check your internet connection and try again</string>
+    <string name="my_profile">My Profile</string>
+    <string name="menu_follow">Follow</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="downloaded_video">Downloaded statuses</string>
+    <string name="dialog_text_no_ads_title">Turn Off ads</string>
+    <string name="dialog_text_no_premium_wallpapers_title">Premium Content</string>
+    <string name="dialog_text_no_premium_wallpapers_description">Get unlimited wallpapers</string>
+    <string name="dialog_text_no_ads_description">Use App more free without ads</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="Logout">Logout</string>
+    <string name="login">Login / Register</string>
+
+    <string name="save_successful_message">Saved To Gallery!</string>
+    <string name="save_error_message">Could not save,Try again later</string>
+    <string name="whatsapp_saver">Whatsapp Status Saver</string>
+    <string name="write_quote">Write Quot</string>
+    <string name="my_earning">My Earning</string>
+    <string name="reference_code_copied">Your Reference code has been copied</string>
+    <string name="hint_payemnts">Payment account infos</string>
+    <string name="send_request">Send Request</string>
+    <string name="request_withdrawal">Request withdrawal</string>
+    <string name="withdrawals">Withdrawals</string>
+
+    <!-- update 1.2 -->
+    <string name="rating_dialog_cancel">Cancel</string>
+    <string name="rating_dialog_experience">How was your experience with us?</string>
+    <string name="rating_dialog_feedback_title">Feedback</string>
+    <string name="rating_dialog_maybe_later">Maybe later</string>
+    <string name="rating_dialog_never">Never</string>
+    <string name="rating_dialog_submit">Submit</string>
+    <string name="FACEBOOK_ADS_INTERSTITIAL_PLACEMENT_ID">ccc</string>
+
+    <string name="capture_video">Capture video</string>
+
+    <string name="status_nocapture">nothing captured yet</string>
+    <string name="status_capturesuccess">Capture successful: %s</string>
+    <string name="status_capturecancelled">Capture cancelled by user</string>
+    <string name="status_capturefailed">Capture failed</string>
+
+    <string name="filename_hint">e.g. myVideo.mp4</string>
+    <string name="duration_hint">maximum duration</string>
+    <string name="duration_unit">sec</string>
+    <string name="filesize_hint">maximum filesize</string>
+    <string name="filesize_unit">Mb</string>
+    <string name="app_record">Record Video</string>
+    <string name="advanced">advanced</string>
+    <string name="github">show on GitHub</string>
+    <string name="github_url">https://github.com/jeroenmols/LandscapeVideoCamera</string>
+    <string name="show_timer">Show Timer</string>
+    <string name="allow_frontcamera">Allow front facing camera</string>
+    <string name="privacy">privacy policy</string>
+    <string name="privacy_url">http://jeroenmols.com/apps/landscapevideocamera/privacy_policy.html</string>
+    <string name="enter_fps_hint">Enter FPS</string>
+
+
+
+
+
+
+
+
+    <string name="main_activity_label">Ringdroid</string>
+
+    <string name="search_edit_box">Search</string>
+
+    <string name="button_start_record_activity">Record New</string>
+
+    <string name="sdcard_readonly">Sorry, the SD Card is mounted as read-only and Ringdroid requires it to be writable.</string>
+    <string name="no_sdcard">Sorry, Ringdroid can\'t run unless you have an SD Card inserted.</string>
+    <string name="sdcard_shared">Sorry, Ringdroid can\'t run while your handset is mounted as a USB device.</string>
+
+    <string name="button_options">Options</string>
+
+    <!--
+     Edit activity
+     -->
+
+    <!-- Labels next to the start and end time edit boxes -->
+    <string name="start_label">Start:</string>
+    <string name="end_label">End:</string>
+
+    <string name="edit_intent">Edit</string>
+
+    <string name="time_seconds">seconds</string>
+
+    <!-- After you save a notification or ringtone and have more options
+         for what to do with them -->
+    <string name="what_to_do_with_ringtone">Saved!  Make this your default ringtone or assign it to a contact?</string>
+    <string name="set_default_notification">Saved!  Make this your default notification?</string>
+
+    <string name="make_default_ringtone_button">Make Default</string>
+    <string name="choose_contact_ringtone_button">Assign to Contact</string>
+    <string name="do_nothing_with_ringtone_button">Close</string>
+
+    <!-- Progress dialog text for loading, recording, or saving... -->
+    <string name="progress_dialog_loading">Loading…</string>
+    <string name="progress_dialog_recording">Recording…</string>
+    <string name="progress_dialog_saving">Saving…</string>
+    <string name="progress_dialog_cancel">Cancel</string>
+    <string name="progress_dialog_stop">Stop</string>
+
+    <!-- Image button descriptions for accessibility -->
+
+    <string name="start_marker">Start marker</string>
+    <string name="end_marker">End marker</string>
+    <string name="rewind">Rewind</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="ffwd">Fast forward</string>
+    <string name="zoom_in">Zoom In</string>
+    <string name="zoom_out">Zoom Out</string>
+    <string name="save_button">Save</string>
+
+    <!--
+     Menu items
+     -->
+
+    <string name="menu_save">Save</string>
+    <string name="menu_reset">Reset</string>
+    <string name="menu_about">About</string>
+    <string name="menu_show_all_audio">Show All Audio</string>
+
+    <!--
+     Context menu items
+     -->
+
+    <string name="context_menu_edit">Edit</string>
+    <string name="context_menu_delete">Delete</string>
+    <string name="context_menu_default_ringtone">Set as Default Ringtone</string>
+    <string name="context_menu_contact">Assign to Contact</string>
+    <string name="context_menu_default_notification">Set as Default Notification</string>
+
+    <!--
+     File Save dialog
+     -->
+
+    <string name="file_save_title">Save As:</string>
+    <string name="file_save_button_save">Save</string>
+    <string name="file_save_button_cancel">Cancel</string>
+
+    <string name="ringtone_type_label">Type:</string>
+
+    <string name="type_music">Music</string>
+    <string name="type_alarm">Alarm</string>
+    <string name="type_notification">Notification</string>
+    <string name="type_ringtone">Ringtone</string>
+
+    <string name="ringtone_name_label">Name:</string>
+
+    <string name="artist_name">Ringdroid</string>
+
+    <!--
+     Delete confirmation dialog
+     -->
+
+    <string name="delete_ringtone">Delete Ringtone</string>
+    <string name="delete_alarm">Delete Alarm</string>
+    <string name="delete_notification">Delete Notification</string>
+    <string name="delete_music">Delete Music</string>
+    <string name="delete_audio">Delete Audio</string>
+
+    <string name="confirm_delete_ringdroid">Are you sure?</string>
+    <string name="confirm_delete_non_ringdroid"
+        >Are you sure?  This file was not created using Ringdroid!</string>
+
+    <string name="delete_ok_button">Delete</string>
+    <string name="delete_cancel_button">Cancel</string>
+
+    <string name="delete_failed">Unable to delete file</string>
+
+    <!--
+     Success and error messages
+     -->
+
+    <string name="alert_title_success">Success</string>
+    <string name="alert_title_failure">Error</string>
+    <string name="alert_ok_button">OK</string>
+    <string name="alert_yes_button">Yes, please!</string>
+    <string name="alert_no_button">No, thanks.</string>
+
+    <string name="save_success_message">Saved!</string>
+    <string name="default_ringtone_success_message">Changed default ringtone</string>
+    <string name="default_notification_success_message">Changed default notification sound</string>
+    <string name="play_error">Unable to play this media file</string>
+    <string name="no_unique_filename">Unable to find unique filename</string>
+    <string name="record_error">Error recording audio</string>
+    <string name="too_small_error">Can\'t save a file that small, try making it longer.</string>
+    <string name="write_error">Error writing file</string>
+    <string name="read_error">Error reading file</string>
+
+    <string name="no_space_error">Your SD card is full, there is not enough space to save this file.</string>
+
+    <string name="bad_extension_error">Sorry, Ringdroid is not yet able to edit files of type</string>
+    <string name="no_extension_error">Sorry, Ringdroid can\'t edit a file if it doesn\'t have an extension like .mp3 or .wav</string>
+
+    <!--
+     Choose Contact Activity
+     -->
+
+    <string name="choose_contact_title">Assign ringtone to which contact?</string>
+    <string name="success_contact_ringtone">Successfully assigned ringtone to:</string>
+
+    <!--
+     About
+     -->
+
+    <string name="about_title">About Ringdroid</string>
+    <string name="about_text"><![CDATA[Ringdroid is free software, distributed under the Apache 2.0 license.  Source code is on github.com/google/ringdroid\n]]></string>
+
+</resources>

@@ -1,0 +1,72 @@
+{
+  "project_info": {
+    "project_number": "950662064642",
+    "firebase_url": "https://ik-videos.firebaseio.com",
+    "project_id": "ik-videos",
+    "storage_bucket": "ik-videos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950662064642:android:1aad9da65de1fa8420551b",
+        "android_client_info": {
+          "package_name": "com.ik.videos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950662064642-dsord22nd3569oe2hfook11gqa6jukg2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ik.videos",
+            "certificate_hash": "6f9e43424e441a630aa9c140be5ebab20f6038ca"
+          }
+        },
+        {
+          "client_id": "950662064642-9ispc0t8nflpgb839rd4367g53qja3vs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ik.videos",
+            "certificate_hash": "815be9adb8759d92a6c77d3a88fac63a6c31d375"
+          }
+        },
+        {
+          "client_id": "950662064642-d9vqtur396gi89fbpqhtlcc2dddf28pu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ik.videos",
+            "certificate_hash": "af84c53be6c8687c9039ff82eb129cafdd44cbd6"
+          }
+        },
+        {
+          "client_id": "950662064642-rfvrfs4820ubift4jv90m00jduorch7k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ik.videos",
+            "certificate_hash": "3b57da66197d7ba6714d7c95b411f2aeb1d84456"
+          }
+        },
+        {
+          "client_id": "950662064642-22euj601hhs898hegfbeffttfln58fm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBbtvLG6i8IJXKjRRvnUtJSuVIx_GASY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950662064642-22euj601hhs898hegfbeffttfln58fm8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
