@@ -3,10 +3,7 @@ package com.ik.videos.ui.Activities;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
-import com.google.android.material.textfield.TextInputLayout;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -20,11 +17,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.textfield.TextInputLayout;
+import com.ik.videos.Provider.PrefManager;
 import com.ik.videos.R;
 import com.ik.videos.api.apiClient;
 import com.ik.videos.api.apiRest;
 import com.ik.videos.model.ApiResponse;
-import com.ik.videos.Provider.PrefManager;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -150,7 +151,7 @@ public class EditActivity extends AppCompatActivity {
                         Toasty.success(getApplicationContext(), getResources().getString(R.string.message_sended), Toast.LENGTH_SHORT).show();
                         finish();
                     } else {
-                        Toasty.error(getApplicationContext(), getString(R.string.no_connexion), Toast.LENGTH_SHORT).show();
+                        Toasty.error(getApplicationContext(), "19 "+getString(R.string.no_connexion), Toast.LENGTH_SHORT).show();
                     }
                     register_progress.dismiss();
                 }
@@ -158,7 +159,7 @@ public class EditActivity extends AppCompatActivity {
                 @Override
                 public void onFailure(Call<ApiResponse> call, Throwable t) {
                     register_progress.dismiss();
-                    Toasty.error(getApplicationContext(), getString(R.string.no_connexion), Toast.LENGTH_SHORT).show();
+                    Toasty.error(getApplicationContext(),"20 "+ getString(R.string.no_connexion), Toast.LENGTH_SHORT).show();
                 }
             });
         }

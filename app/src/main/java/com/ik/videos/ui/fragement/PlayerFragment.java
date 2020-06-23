@@ -8,12 +8,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import androidx.fragment.app.Fragment;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Base64;
@@ -31,6 +25,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.ExoPlayer;
@@ -60,10 +60,6 @@ import com.google.android.exoplayer2.util.Util;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
-import com.leo.simplearcloader.SimpleArcLoader;
-import com.like.LikeButton;
-import com.like.OnLikeListener;
-import com.squareup.picasso.Picasso;
 import com.ik.videos.Adapters.CommentAdapter;
 import com.ik.videos.App;
 import com.ik.videos.Provider.DownloadStorage;
@@ -77,6 +73,10 @@ import com.ik.videos.model.Comment;
 import com.ik.videos.model.Status;
 import com.ik.videos.ui.Activities.LoginActivity;
 import com.ik.videos.ui.Activities.UserActivity;
+import com.leo.simplearcloader.SimpleArcLoader;
+import com.like.LikeButton;
+import com.like.OnLikeListener;
+import com.squareup.picasso.Picasso;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -750,7 +750,7 @@ public class PlayerFragment extends Fragment {
                             commentAdapter.notifyDataSetChanged();
 
                         }else{
-                            Toasty.error(getActivity(), response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toasty.error(getActivity(), "0 "+response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                     recycle_view_comment.scrollToPosition(recycle_view_comment.getAdapter().getItemCount()-1);
@@ -1074,7 +1074,7 @@ public class PlayerFragment extends Fragment {
         try {
             startActivity(Intent.createChooser(shareIntent,getResources().getString(R.string.share_via)+ " " + getResources().getString(R.string.app_name) ));
         } catch (android.content.ActivityNotFoundException ex) {
-            Toasty.error(getActivity().getApplicationContext(),getResources().getString(R.string.app_not_installed) , Toast.LENGTH_SHORT, true).show();
+            Toasty.error(getActivity().getApplicationContext(),"0 "+getResources().getString(R.string.app_not_installed) , Toast.LENGTH_SHORT, true).show();
         }
     }
     /**
@@ -1247,7 +1247,7 @@ public class PlayerFragment extends Fragment {
                     }
                 }else {
                     try {
-                        Toasty.error(App.getInstance(), getResources().getString(R.string.download_failed), Toast.LENGTH_SHORT, true).show();
+                        Toasty.error(App.getInstance(), "0 "+getResources().getString(R.string.download_failed), Toast.LENGTH_SHORT, true).show();
                     }catch (Exception e){
 
                     }
@@ -1290,7 +1290,7 @@ public class PlayerFragment extends Fragment {
             try {
                 startActivity(Intent.createChooser(shareIntent,getResources().getString(R.string.share_via)+ " " + getResources().getString(R.string.app_name) ));
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(getActivity().getApplicationContext(),getResources().getString(R.string.app_not_installed) , Toast.LENGTH_SHORT, true).show();
+                Toasty.error(getActivity().getApplicationContext(),"0 "+getResources().getString(R.string.app_not_installed) , Toast.LENGTH_SHORT, true).show();
             }
         }
     }

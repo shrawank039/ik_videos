@@ -10,9 +10,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
 import android.provider.MediaStore;
-import androidx.core.content.FileProvider;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,10 +20,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
+import androidx.core.content.FileProvider;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.ik.videos.R;
 import com.ik.videos.model.StatusWhatsapp;
-import com.squareup.picasso.Picasso;
 import com.ik.videos.ui.Activities.FullscreenActivity;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -117,7 +118,7 @@ public class RecyclerViewMediaAdapter extends RecyclerView.Adapter<RecyclerView.
                             try {
                                 activity.startActivity(shareIntent);
                             } catch (android.content.ActivityNotFoundException ex) {
-                                Toasty.error(activity.getApplicationContext(), activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
+                                Toasty.error(activity.getApplicationContext(), "6 "+activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -145,7 +146,7 @@ public class RecyclerViewMediaAdapter extends RecyclerView.Adapter<RecyclerView.
                             try {
                                 activity.startActivity(shareIntent);
                             } catch (android.content.ActivityNotFoundException ex) {
-                                Toasty.error(activity.getApplicationContext(), activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
+                                Toasty.error(activity.getApplicationContext(), "7 "+activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -177,7 +178,7 @@ public class RecyclerViewMediaAdapter extends RecyclerView.Adapter<RecyclerView.
                         try {
                             activity.startActivity(shareIntent);
                         } catch (android.content.ActivityNotFoundException ex) {
-                            Toasty.error(activity.getApplicationContext(), activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
+                            Toasty.error(activity.getApplicationContext(), "8 "+activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 });
@@ -204,7 +205,7 @@ public class RecyclerViewMediaAdapter extends RecyclerView.Adapter<RecyclerView.
                             try {
                                 activity.startActivity(shareIntent);
                             } catch (android.content.ActivityNotFoundException ex) {
-                                Toasty.error(activity.getApplicationContext(), activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
+                                Toasty.error(activity.getApplicationContext(), "9 "+activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
                             }
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -246,7 +247,7 @@ public class RecyclerViewMediaAdapter extends RecyclerView.Adapter<RecyclerView.
                         } catch (Exception e) {
                             e.printStackTrace();
                             Log.e("RecyclerV", "onClick: Error:"+e.getMessage() );
-                            Toasty.error(activity,activity.getResources().getString(R.string.save_error_message), Toast.LENGTH_LONG).show();
+                            Toasty.error(activity,"10 "+activity.getResources().getString(R.string.save_error_message), Toast.LENGTH_LONG).show();
                         }
                     }
                 }.run();

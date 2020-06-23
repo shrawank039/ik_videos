@@ -14,10 +14,6 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
 import android.os.Vibrator;
-import androidx.annotation.NonNull;
-import androidx.core.content.FileProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,7 +29,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.core.content.FileProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.facebook.ads.Ad;
+import com.facebook.ads.AdChoicesView;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdIconView;
 import com.facebook.ads.MediaView;
@@ -60,14 +62,14 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
-import com.facebook.ads.AdChoicesView;
 import com.google.android.gms.ads.VideoController;
 import com.google.android.gms.ads.VideoOptions;
 import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.gms.ads.formats.UnifiedNativeAdView;
-import com.like.LikeButton;
-import com.peekandpop.shalskar.peekandpop.PeekAndPop;
+import com.ik.videos.Provider.DownloadStorage;
+import com.ik.videos.Provider.FavoritesStorage;
+import com.ik.videos.Provider.PrefManager;
 import com.ik.videos.R;
 import com.ik.videos.api.apiClient;
 import com.ik.videos.api.apiRest;
@@ -75,9 +77,6 @@ import com.ik.videos.model.Category;
 import com.ik.videos.model.Slide;
 import com.ik.videos.model.Status;
 import com.ik.videos.model.User;
-import com.ik.videos.Provider.DownloadStorage;
-import com.ik.videos.Provider.FavoritesStorage;
-import com.ik.videos.Provider.PrefManager;
 import com.ik.videos.ui.Activities.AllFullScreenCategoryActivity;
 import com.ik.videos.ui.Activities.AllFullScreenFollowActivity;
 import com.ik.videos.ui.Activities.AllFullScreenSearchActivity;
@@ -88,8 +87,10 @@ import com.ik.videos.ui.Activities.ImageActivity;
 import com.ik.videos.ui.Activities.PlayerActivity;
 import com.ik.videos.ui.Activities.QuoteActivity;
 import com.ik.videos.ui.Activities.VideoActivity;
-import com.squareup.picasso.Picasso;
 import com.ik.videos.ui.view.ClickableViewPager;
+import com.like.LikeButton;
+import com.peekandpop.shalskar.peekandpop.PeekAndPop;
+import com.squareup.picasso.Picasso;
 import com.whygraphics.gifview.gif.GIFView;
 
 import java.io.BufferedInputStream;
@@ -2276,7 +2277,7 @@ public class StatusAdapter extends RecyclerView.Adapter {
                             break;
                     }
                 }else{
-                    Toasty.error(activity.getApplicationContext(), activity.getString(R.string.download_failed), Toast.LENGTH_SHORT, true).show();
+                    Toasty.error(activity.getApplicationContext(), "11 "+activity.getString(R.string.download_failed), Toast.LENGTH_SHORT, true).show();
                 }
             }else {
                 addShare(position);
@@ -2327,7 +2328,7 @@ public class StatusAdapter extends RecyclerView.Adapter {
             try {
                 activity.startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(activity.getApplicationContext(), activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
+                Toasty.error(activity.getApplicationContext(), "12 "+activity.getResources().getString(R.string.whatsapp_not_installed), Toast.LENGTH_SHORT, true).show();
             }
         }
         public void shareFacebook(Integer position){
@@ -2350,7 +2351,7 @@ public class StatusAdapter extends RecyclerView.Adapter {
             try {
                 activity.startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(activity.getApplicationContext(), activity.getResources().getString(R.string.facebook_not_installed), Toast.LENGTH_SHORT, true).show();
+                Toasty.error(activity.getApplicationContext(), "13 "+activity.getResources().getString(R.string.facebook_not_installed), Toast.LENGTH_SHORT, true).show();
             }
         }
         public void shareMessenger(Integer position){
@@ -2371,7 +2372,7 @@ public class StatusAdapter extends RecyclerView.Adapter {
             try {
                 activity.startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(activity.getApplicationContext(), activity.getResources().getString(R.string.messenger_not_installed), Toast.LENGTH_SHORT, true).show();
+                Toasty.error(activity.getApplicationContext(), "14 "+activity.getResources().getString(R.string.messenger_not_installed), Toast.LENGTH_SHORT, true).show();
             }
         }
         public void shareInstagram(Integer position){
@@ -2394,7 +2395,7 @@ public class StatusAdapter extends RecyclerView.Adapter {
             try {
                 activity.startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(activity.getApplicationContext(), activity.getResources().getString(R.string.instagram_not_installed), Toast.LENGTH_SHORT, true).show();
+                Toasty.error(activity.getApplicationContext(), "15 "+activity.getResources().getString(R.string.instagram_not_installed), Toast.LENGTH_SHORT, true).show();
             }
         }
         public void share(Integer position){
@@ -2415,7 +2416,7 @@ public class StatusAdapter extends RecyclerView.Adapter {
             try {
                 activity.startActivity(Intent.createChooser(shareIntent, "Shared via " + activity.getResources().getString(R.string.app_name) ));
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(activity.getApplicationContext(), activity.getResources().getString(R.string.app_not_installed), Toast.LENGTH_SHORT, true).show();
+                Toasty.error(activity.getApplicationContext(), "16 "+activity.getResources().getString(R.string.app_not_installed), Toast.LENGTH_SHORT, true).show();
             }
         }
 

@@ -1,13 +1,6 @@
 package com.ik.videos.ui.Activities;
 
 import android.app.Activity;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-
-import com.facebook.ads.AdSettings;
-import com.ik.videos.R;
-
-
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -16,10 +9,8 @@ import android.content.ServiceConnection;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.IBinder;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -28,16 +19,26 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.android.vending.billing.IInAppBillingService;
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.Constants;
 import com.anjlab.android.iab.v3.TransactionDetails;
+import com.facebook.ads.AdSettings;
+import com.ik.videos.Provider.PrefManager;
+import com.ik.videos.R;
 import com.ik.videos.api.apiClient;
 import com.ik.videos.api.apiRest;
 import com.ik.videos.config.Global;
 import com.ik.videos.model.ApiResponse;
 import com.ik.videos.model.Language;
-import com.ik.videos.Provider.PrefManager;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,9 +49,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class
 SplashActivity extends AppCompatActivity {

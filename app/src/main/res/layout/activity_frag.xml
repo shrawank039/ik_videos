@@ -85,7 +85,7 @@
         android:id="@+id/btnAudioTrim"
         android:layout_width="50dp"
         android:layout_margin="10dp"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_height="50dp"
         android:background="@drawable/trimaudio"
         app:layout_constraintRight_toRightOf="parent"

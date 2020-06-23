@@ -14,8 +14,6 @@ import android.net.Uri;
 import android.opengl.GLException;
 import android.os.Environment;
 import android.provider.MediaStore;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -24,6 +22,9 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.daasuu.camerarecorder.CameraRecordListener;
 import com.daasuu.camerarecorder.CameraRecorder;
@@ -97,7 +98,6 @@ public class BaseCameraActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), UploadVideoActivity.class);
                     intent.putExtra("videofile", outVideoPath);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
                     startActivity(intent);
                 }
                 pd.cancel();
@@ -113,11 +113,11 @@ public class BaseCameraActivity extends AppCompatActivity {
 
         };
 
+        mediaPlayer = new MediaPlayer();
         recordBtn = findViewById(R.id.btn_record);
         recordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
 
                 if (recordBtn.getTag().equals(getString(R.string.app_record))) {
                     filepath = getVideoFilePath("og");
@@ -127,7 +127,6 @@ public class BaseCameraActivity extends AppCompatActivity {
 
                     if (musicURI != null) {
                         mute = true;
-                        mediaPlayer = new MediaPlayer();
                         mediaPlayer.reset();
                         try {
                             mediaPlayer.setDataSource(getApplicationContext(), musicURI);
@@ -139,6 +138,7 @@ public class BaseCameraActivity extends AppCompatActivity {
                         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                             public void onCompletion(MediaPlayer mp) {
                                 Toast.makeText(getApplicationContext(), "Media Completed", Toast.LENGTH_SHORT).show();
+                                mediaPlayer.stop();
                                 cameraRecorder.stop();
                                 recordBtn.setTag(getString(R.string.app_record));
                                 recordBtn.setBackgroundResource(R.drawable.recordstart);
@@ -146,6 +146,7 @@ public class BaseCameraActivity extends AppCompatActivity {
                         });
                     }
                 } else {
+                    mediaPlayer.stop();
                     cameraRecorder.stop();
                     recordBtn.setTag(getString(R.string.app_record));
                     recordBtn.setBackgroundResource(R.drawable.recordstart);
@@ -159,10 +160,13 @@ public class BaseCameraActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent videoIntent = new Intent(
-                        Intent.ACTION_PICK,
-                        android.provider.MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(Intent.createChooser(videoIntent, "Select Audio"), 11);
+//                Intent videoIntent = new Intent(
+//                        Intent.ACTION_PICK,
+//                        android.provider.MediaStore.Audio.Media.EXTERNAL_CONTENT_URI);
+//                startActivityForResult(Intent.createChooser(videoIntent, "Select Audio"), 11);
+                Intent intent=new Intent(BaseCameraActivity.this, RingdroidSelectActivity.class);
+                startActivityForResult(intent, 7);
+
             }
         });
 
@@ -241,32 +245,52 @@ public class BaseCameraActivity extends AppCompatActivity {
     }
     @Override
     protected void onActivityResult(int requestCode,int resultCode,Intent data){
-        if (requestCode == 11 && null != data) {
-            if (requestCode == 11) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-                musicURI = data.getData();
-                try {
-                    musicPath = getAudioPath(musicURI);
-                    Toast.makeText(getApplicationContext(),musicPath,Toast.LENGTH_LONG).show();
-                    File f = new File(musicPath);
-                    long fileSizeInBytes = f.length();
-                    long fileSizeInKB = fileSizeInBytes / 1024;
-                    long fileSizeInMB = fileSizeInKB / 1024;
-                    mute=true;
-                    audioSelect = true;if (fileSizeInMB > 8) {
-                        Toast.makeText(getApplicationContext(),"File too Large",Toast.LENGTH_LONG).show();
-                    }
-                    setUpCamera();
-                } catch (Exception e) {
-                    //handle exception
-                    Toast.makeText(getApplicationContext(), "Unable to process,try again", Toast.LENGTH_SHORT).show();
-                }
-                //   String path1 = uri.getPath();
-
+//        if (requestCode == 11 && null != data) {
+//            if (requestCode == 11) {
+//
+//                musicURI = data.getData();
+//                try {
+//                    musicPath = getAudioPath(musicURI);
+//                    Toast.makeText(getApplicationContext(),musicPath,Toast.LENGTH_LONG).show();
+//                    File f = new File(musicPath);
+//                    long fileSizeInBytes = f.length();
+//                    long fileSizeInKB = fileSizeInBytes / 1024;
+//                    long fileSizeInMB = fileSizeInKB / 1024;
+//                    mute=true;
+//                    audioSelect = true;if (fileSizeInMB > 8) {
+//                        Toast.makeText(getApplicationContext(),"File too Large",Toast.LENGTH_LONG).show();
+//                    }
+//                    setUpCamera();
+//                } catch (Exception e) {
+//                    //handle exception
+//                    Toast.makeText(getApplicationContext(), "Unable to process,try again", Toast.LENGTH_SHORT).show();
+//                }
+//                //   String path1 = uri.getPath();
+//
+//            }
+//
+//        }
+        if(requestCode==7)
+        {
+            musicPath=data.getStringExtra("music_path");
+            musicURI = Uri.parse(musicPath);
+            try {
+              //  Toast.makeText(getApplicationContext(),musicPath,Toast.LENGTH_LONG).show();
+                assert musicPath != null;
+                File f = new File(musicPath);
+                long fileSizeInBytes = f.length();
+                long fileSizeInKB = fileSizeInBytes / 1024;
+                long fileSizeInMB = fileSizeInKB / 1024;
+                mute=true;
+                audioSelect = true;
+                setUpCamera();
+            } catch (Exception e) {
+                //handle exception
+                Toast.makeText(getApplicationContext(), "Unable to process,try again", Toast.LENGTH_SHORT).show();
             }
         }
-
-        super.onActivityResult(requestCode, resultCode, data);
     }
     private String getAudioPath(Uri uri) {
         String[] data = {MediaStore.Audio.Media.DATA};
@@ -337,7 +361,6 @@ public class BaseCameraActivity extends AppCompatActivity {
 
     private void setUpCamera() {
         setUpCameraView();
-
         cameraRecorder = new CameraRecorderBuilder(this, sampleGLView)
                 //.recordNoFilter(true)
                 .cameraRecordListener(new CameraRecordListener() {
@@ -351,7 +374,6 @@ public class BaseCameraActivity extends AppCompatActivity {
                             }
                         });
                     }
-
                     @Override
                     public void onRecordComplete() {
                         pd.show();
@@ -479,9 +501,9 @@ public void mergeAudio()
         long fileSizeInMB = fileSizeInKB / 1024;
        if (fileSizeInMB < 15) {
            if (musicURI != null) {
+
                try {
                    File fileAudio = new File(musicPath);
-
                    AndroidAudioConverter.with(context)
                            .setFile(fileAudio)
                            .setFormat(AudioFormat.AAC)
@@ -533,4 +555,27 @@ public void mergeAudio()
         return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
     }
 
+    @Override
+    public void onBackPressed() {
+
+        new android.app.AlertDialog.Builder(this)
+                .setTitle("Alert")
+                .setMessage("Are you Sure? if you Go back you can't undo this action")
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+                        finish();
+
+                    }
+                }).show();
+
+    }
 }

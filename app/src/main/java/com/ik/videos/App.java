@@ -3,9 +3,10 @@ package com.ik.videos;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.widget.Toast;
+
 import androidx.multidex.MultiDex;
 import androidx.multidex.MultiDexApplication;
-import android.widget.Toast;
 
 import cafe.adriel.androidaudioconverter.AndroidAudioConverter;
 import cafe.adriel.androidaudioconverter.callback.ILoadCallback;
@@ -36,7 +37,7 @@ public class App extends MultiDexApplication {
             @Override
             public void onFailure(Exception error) {
                 // FFmpeg is not supported by device
-                Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Conv "+error.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }

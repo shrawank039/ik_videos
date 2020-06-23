@@ -28,6 +28,7 @@ public class VideoCapActivity extends BaseCameraActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_frag);
         recordBtnAudioTrim = findViewById(R.id.btnAudioTrim);
+
         recordBtnAudioTrim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,6 +36,7 @@ public class VideoCapActivity extends BaseCameraActivity {
                 startActivity(new Intent(VideoCapActivity.this, RingdroidSelectActivity.class));
             }
         });
+
         onCreateActivity(VideoCapActivity.this);
         videoWidth = 480;
         videoHeight = 640;

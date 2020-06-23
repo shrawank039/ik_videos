@@ -1,10 +1,7 @@
 package com.ik.videos.ui.Activities;
 
 import android.app.ProgressDialog;
-import com.google.android.material.textfield.TextInputLayout;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -15,6 +12,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.textfield.TextInputLayout;
 import com.ik.videos.R;
 import com.ik.videos.api.apiClient;
 import com.ik.videos.api.apiRest;
@@ -113,14 +114,14 @@ public class SupportActivity extends AppCompatActivity {
                     support_input_name.setText("");
                     finish();
                 }else{
-                    Toasty.error(getApplicationContext(), getString(R.string.no_connexion), Toast.LENGTH_SHORT).show();
+                    Toasty.error(getApplicationContext(), "45 "+getString(R.string.no_connexion), Toast.LENGTH_SHORT).show();
                 }
                 register_progress.dismiss();
             }
             @Override
             public void onFailure(Call<ApiResponse> call, Throwable t) {
                 register_progress.dismiss();
-                Toasty.error(getApplicationContext(), getString(R.string.no_connexion), Toast.LENGTH_SHORT).show();
+                Toasty.error(getApplicationContext(), "46 "+getString(R.string.no_connexion), Toast.LENGTH_SHORT).show();
             }
         });
     }

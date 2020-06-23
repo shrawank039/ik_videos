@@ -2,8 +2,6 @@ package com.ik.videos.ui.Activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +11,9 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -30,11 +31,11 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.ik.videos.Provider.PrefManager;
 import com.ik.videos.R;
 import com.ik.videos.api.apiClient;
 import com.ik.videos.api.apiRest;
 import com.ik.videos.model.ApiResponse;
-import com.ik.videos.Provider.PrefManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,7 +59,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     private CallbackManager callbackManager;
 
     private ProgressDialog register_progress;
-    private TextView text_view_skip_login;
+    private TextView text_view_skip_login, phone_login;
     private RelativeLayout relative_layout_google_login;
     private RelativeLayout relative_layout_facebook_login;
     private EditText edit_text_reference_code;
@@ -97,8 +98,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         this.sign_in_button_google   =      (SignInButton)  findViewById(R.id.sign_in_button_google);
         this.sign_in_button_facebook =      (LoginButton)   findViewById(R.id.sign_in_button_facebook);
         this.text_view_skip_login    = (TextView) findViewById(R.id.text_view_skip_login);
+        this.phone_login = (TextView) findViewById(R.id.text_phone_login);
 
     }
+
     public void initAction(){
         btn_send_code.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -135,6 +138,14 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 startActivity(intent);
             }
         });
+
+        phone_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+              //  otpLogin();
+            }
+        });
+
         this.text_view_skip_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -315,7 +326,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                             }
                             updateToken(Integer.parseInt(id_user),token_user,token);
                         }else{
-                            Toasty.error(getApplicationContext(),getResources().getString(R.string.account_disabled), Toast.LENGTH_SHORT, true).show();
+                            Toasty.error(getApplicationContext(),"4 "+getResources().getString(R.string.account_disabled), Toast.LENGTH_SHORT, true).show();
                             register_progress.dismiss();
                         }
                     }
@@ -386,7 +397,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                         Toasty.success(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT, true).show();
                         finish();
                     }else{
-                        Toasty.error(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT, true).show();
+                        Toasty.error(getApplicationContext(), "5 "+response.body().getMessage(), Toast.LENGTH_SHORT, true).show();
                     }
                 }
             }

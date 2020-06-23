@@ -11,16 +11,8 @@ import android.graphics.drawable.GradientDrawable;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Environment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
+import android.os.Environment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Base64;
@@ -35,7 +27,16 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.ik.videos.Adapters.CategorySelectAdapter;
 import com.ik.videos.Adapters.LanguageSelectAdapter;
 import com.ik.videos.Adapters.SelectableCategoryViewHolder;
@@ -432,7 +433,7 @@ public class UploadQuoteActivity extends AppCompatActivity implements ProgressRe
                         finish();
                     }
                 }else{
-                    Toasty.error(getApplicationContext(), getResources().getString(R.string.no_connexion)+" - Plrease retry",Toast.LENGTH_SHORT).show();
+                    Toasty.error(getApplicationContext(), "0 "+getResources().getString(R.string.no_connexion)+" - Plrease retry",Toast.LENGTH_SHORT).show();
                     fab_status_upload_send.show();
                 }
             }

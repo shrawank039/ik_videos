@@ -8,8 +8,9 @@
         <item>Google Pay</item>
         <item>Paypal</item>
     </string-array>
-    <string name="facebook_app_id">179436866467900</string>
-    <string name="fb_login_protocol_scheme">fb179436866467900</string>
+
+    <string name="facebook_app_id">2625915234314165</string>
+    <string name="fb_login_protocol_scheme">fb2625915234314165</string>
 
 
     <string name="NATIVE_ADS_TYPE">both</string> <!-- facebook/admob/both -->

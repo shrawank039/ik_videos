@@ -152,11 +152,11 @@ public class UploadGifActivity extends AppCompatActivity implements ProgressRequ
             @Override
             public void onClick(View v) {
                 if (edit_text_upload_title.getText().toString().trim().length()<3){
-                    Toasty.error(UploadGifActivity.this, getResources().getString(R.string.edit_text_upload_title_error), Toast.LENGTH_SHORT).show();
+                    Toasty.error(UploadGifActivity.this, "0 "+getResources().getString(R.string.edit_text_upload_title_error), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (videoUrl==null){
-                    Toasty.error(UploadGifActivity.this, getResources().getString(R.string.image_upload_error), Toast.LENGTH_SHORT).show();
+                    Toasty.error(UploadGifActivity.this, "0 "+getResources().getString(R.string.image_upload_error), Toast.LENGTH_SHORT).show();
                     return;
                 }
                 upload(CAMERA_REQUEST_IMAGE_1);
@@ -489,7 +489,7 @@ public class UploadGifActivity extends AppCompatActivity implements ProgressRequ
                     Toasty.success(getApplication(),getResources().getString(R.string.gif_upload_success),Toast.LENGTH_LONG).show();
                     finish();
                 }else{
-                    Toasty.error(getApplication(),getResources().getString(R.string.no_connexion),Toast.LENGTH_LONG).show();
+                    Toasty.error(getApplication(),"0 "+getResources().getString(R.string.no_connexion),Toast.LENGTH_LONG).show();
 
                 }
                 // file.delete();
@@ -499,7 +499,7 @@ public class UploadGifActivity extends AppCompatActivity implements ProgressRequ
             }
             @Override
             public void onFailure(Call<ApiResponse> call, Throwable t) {
-                Toasty.error(getApplication(),getResources().getString(R.string.no_connexion),Toast.LENGTH_LONG).show();
+                Toasty.error(getApplication(),"0 "+getResources().getString(R.string.no_connexion),Toast.LENGTH_LONG).show();
                 pd.dismiss();
                 pd.cancel();
             }

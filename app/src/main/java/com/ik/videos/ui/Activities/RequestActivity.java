@@ -1,9 +1,7 @@
 package com.ik.videos.ui.Activities;
 
 import android.app.ProgressDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -11,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.ik.videos.Provider.PrefManager;
 import com.ik.videos.R;
@@ -78,7 +79,7 @@ public class RequestActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (payments_details_input_input.getText().toString().trim().length()<5){
-                    Toasty.error(getApplicationContext(),getResources().getString(R.string.error_short_value)).show();
+                    Toasty.error(getApplicationContext(),"43 "+getResources().getString(R.string.error_short_value)).show();
                     return;
                 }
                 requestWithdrawal();
@@ -108,7 +109,7 @@ public class RequestActivity extends AppCompatActivity {
                     if (response.body().getCode().equals(200)){
                         Toasty.success(getApplicationContext(),response.body().getMessage(),Toast.LENGTH_LONG).show();
                     }else{
-                        Toasty.error(getApplicationContext(),response.body().getMessage(),Toast.LENGTH_LONG).show();
+                        Toasty.error(getApplicationContext(),"44 "+response.body().getMessage(),Toast.LENGTH_LONG).show();
                     }
                 }
                 register_progress.dismiss();

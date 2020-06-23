@@ -3,13 +3,12 @@ package com.ik.videos.api;
 import android.app.Activity;
 import android.widget.Toast;
 
-import com.jakewharton.picasso.OkHttp3Downloader;
 import com.ik.videos.App;
 import com.ik.videos.BuildConfig;
+import com.ik.videos.Provider.PrefManager;
 import com.ik.videos.config.Global;
 import com.ik.videos.model.ApiResponse;
-import com.ik.videos.Provider.PrefManager;
-import com.ik.videos.ui.Activities.SplashActivity;
+import com.jakewharton.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -66,8 +65,8 @@ public class apiClient {
     public static  void setClient(retrofit2.Response<ApiResponse> response, Activity activity, PrefManager prf){
         if (response.isSuccessful()) {
             if (response.body().getCode().equals(202)) {
-                Toasty.error(activity,response.body().getMessage(),Toast.LENGTH_LONG).show();
-                SplashActivity.adapteActivity(activity);
+                Toasty.error(activity,"17 "+response.body().getMessage(), Toast.LENGTH_LONG).show();
+               // SplashActivity.adapteActivity(activity);
             } else {
                 prf.setString("formatted","true");
             }

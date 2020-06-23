@@ -7,18 +7,8 @@ import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.os.Environment;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.Fragment;
-import androidx.core.content.ContextCompat;
-import androidx.core.content.FileProvider;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.appcompat.widget.Toolbar;
+import android.os.Environment;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Base64;
@@ -38,6 +28,17 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdChoicesView;
 import com.facebook.ads.AdError;
@@ -48,11 +49,6 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
-import com.like.LikeButton;
-import com.like.OnAnimationEndListener;
-import com.like.OnLikeListener;
-import com.peekandpop.shalskar.peekandpop.PeekAndPop;
-import com.squareup.picasso.Picasso;
 import com.ik.videos.Adapters.CommentAdapter;
 import com.ik.videos.Adapters.StatusAdapter;
 import com.ik.videos.App;
@@ -67,6 +63,11 @@ import com.ik.videos.model.Category;
 import com.ik.videos.model.Comment;
 import com.ik.videos.model.Language;
 import com.ik.videos.model.Status;
+import com.like.LikeButton;
+import com.like.OnAnimationEndListener;
+import com.like.OnLikeListener;
+import com.peekandpop.shalskar.peekandpop.PeekAndPop;
+import com.squareup.picasso.Picasso;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -1500,7 +1501,7 @@ public class ImageActivity extends AppCompatActivity {
                             commentAdapter.notifyDataSetChanged();
 
                         }else{
-                            Toasty.error(ImageActivity.this, response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toasty.error(ImageActivity.this,"32 "+ response.body().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                     recycle_view_comment.scrollToPosition(recycle_view_comment.getAdapter().getItemCount()-1);
@@ -2198,7 +2199,7 @@ public class ImageActivity extends AppCompatActivity {
                     }
                 }else {
                     try {
-                        Toasty.error(App.getInstance(), getResources().getString(R.string.download_failed), Toast.LENGTH_SHORT, true).show();
+                        Toasty.error(App.getInstance(),"33 "+ getResources().getString(R.string.download_failed), Toast.LENGTH_SHORT, true).show();
                     }catch (Exception e){
 
                     }
@@ -2260,7 +2261,7 @@ public class ImageActivity extends AppCompatActivity {
             try {
                 startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(ImageActivity.this.getApplicationContext(),getResources().getString(R.string.whatsapp_not_installed) , Toast.LENGTH_SHORT, true).show();
+                Toasty.error(ImageActivity.this.getApplicationContext(),"34 "+getResources().getString(R.string.whatsapp_not_installed) , Toast.LENGTH_SHORT, true).show();
             }
         }
         public void shareFacebook(String path){
@@ -2280,7 +2281,7 @@ public class ImageActivity extends AppCompatActivity {
             try {
                 startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(ImageActivity.this.getApplicationContext(),getResources().getString(R.string.facebook_not_installed), Toast.LENGTH_SHORT, true).show();
+                Toasty.error(ImageActivity.this.getApplicationContext(),"35 "+getResources().getString(R.string.facebook_not_installed), Toast.LENGTH_SHORT, true).show();
             }
         }
         public void shareMessenger(String path){
@@ -2300,7 +2301,7 @@ public class ImageActivity extends AppCompatActivity {
             try {
                 startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(ImageActivity.this.getApplicationContext(),getResources().getString(R.string.messenger_not_installed) , Toast.LENGTH_SHORT, true).show();
+                Toasty.error(ImageActivity.this.getApplicationContext(),"36 "+getResources().getString(R.string.messenger_not_installed) , Toast.LENGTH_SHORT, true).show();
             }
         }
         public void shareSnapshat(String path){
@@ -2320,7 +2321,7 @@ public class ImageActivity extends AppCompatActivity {
             try {
                 startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(ImageActivity.this.getApplicationContext(),getResources().getString(R.string.snapchat_not_installed) , Toast.LENGTH_SHORT, true).show();
+                Toasty.error(ImageActivity.this.getApplicationContext(),"37 "+getResources().getString(R.string.snapchat_not_installed) , Toast.LENGTH_SHORT, true).show();
             }
         }
         public void shareHike(String path){
@@ -2341,7 +2342,7 @@ public class ImageActivity extends AppCompatActivity {
             try {
                 startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(ImageActivity.this.getApplicationContext(),getResources().getString(R.string.hike_not_installed) , Toast.LENGTH_SHORT, true).show();
+                Toasty.error(ImageActivity.this.getApplicationContext(),"38 "+getResources().getString(R.string.hike_not_installed) , Toast.LENGTH_SHORT, true).show();
             }
         }
         public void shareInstagram(String path){
@@ -2361,7 +2362,7 @@ public class ImageActivity extends AppCompatActivity {
             try {
                 startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(ImageActivity.this.getApplicationContext(), getResources().getString(R.string.instagram_not_installed) , Toast.LENGTH_SHORT, true).show();
+                Toasty.error(ImageActivity.this.getApplicationContext(), "39 "+getResources().getString(R.string.instagram_not_installed) , Toast.LENGTH_SHORT, true).show();
             }
         }
         public void shareTwitter(String path){
@@ -2381,7 +2382,7 @@ public class ImageActivity extends AppCompatActivity {
             try {
                 startActivity(shareIntent);
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(ImageActivity.this.getApplicationContext(), getResources().getString(R.string.twitter_not_installed), Toast.LENGTH_SHORT, true).show();
+                Toasty.error(ImageActivity.this.getApplicationContext(),"40 "+ getResources().getString(R.string.twitter_not_installed), Toast.LENGTH_SHORT, true).show();
             }
         }
         public void share(String path){
@@ -2400,7 +2401,7 @@ public class ImageActivity extends AppCompatActivity {
             try {
                 startActivity(Intent.createChooser(shareIntent,getResources().getString(R.string.share_via)+ " " + getResources().getString(R.string.app_name) ));
             } catch (android.content.ActivityNotFoundException ex) {
-                Toasty.error(ImageActivity.this.getApplicationContext(),getResources().getString(R.string.app_not_installed) , Toast.LENGTH_SHORT, true).show();
+                Toasty.error(ImageActivity.this.getApplicationContext(),"41 "+getResources().getString(R.string.app_not_installed) , Toast.LENGTH_SHORT, true).show();
             }
         }
     }
