@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle("Latest");
+        getSupportActionBar().setTitle("Popular & New");
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -738,10 +738,10 @@ public class MainActivity extends AppCompatActivity
             public void onPageSelected(final int position) {
                 switch (position){
                     case 0:
-                        getSupportActionBar().setTitle("Latest");
+                        getSupportActionBar().setTitle("Popular & New");
                         break;
                     case 1:
-                        getSupportActionBar().setTitle("Popular");
+                        getSupportActionBar().setTitle("Latest Posts");
                         break;
                     case 2:
                         getSupportActionBar().setTitle("Follow");

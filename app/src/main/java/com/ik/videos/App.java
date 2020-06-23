@@ -37,7 +37,7 @@ public class App extends MultiDexApplication {
             @Override
             public void onFailure(Exception error) {
                 // FFmpeg is not supported by device
-                Toast.makeText(getApplicationContext(),"Conv "+error.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }

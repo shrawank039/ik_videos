@@ -80,6 +80,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         if (prf.getString("LOGGED").toString().equals("TRUE")){
             Intent intent= new Intent(LoginActivity.this,MainActivity.class);
             startActivity(intent);
+            finish();
         }
         initView();
         initAction();
@@ -359,6 +360,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                     Toasty.success(getApplicationContext(),response.body().getMessage(), Toast.LENGTH_SHORT, true).show();
                 }
                 if (!referenceCodeAsked){
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
                     finish();
                 }
             }
@@ -395,6 +397,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 if (response.isSuccessful()){
                     if (response.body().getCode().equals(200)) {
                         Toasty.success(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_SHORT, true).show();
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         finish();
                     }else{
                         Toasty.error(getApplicationContext(), "5 "+response.body().getMessage(), Toast.LENGTH_SHORT, true).show();

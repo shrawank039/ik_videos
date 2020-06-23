@@ -160,10 +160,17 @@ SplashActivity extends AppCompatActivity {
                                 finish();
                                prf.setString("first","true");
                             }else{
-                                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
-                                startActivity(intent);
-                                overridePendingTransition(R.anim.enter, R.anim.exit);
-                                finish();
+                                PrefManager prf= new PrefManager(getApplicationContext());
+                                if (prf.getString("LOGGED").toString().equals("TRUE")){
+                                    Intent intent= new Intent(SplashActivity.this,MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }else {
+                                    Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+                                    startActivity(intent);
+                                    overridePendingTransition(R.anim.enter, R.anim.exit);
+                                    finish();
+                                }
                             }
                         }else if (response.body().getCode().equals(202)) {
                             String title_update=response.body().getValues().get(0).getValue();
@@ -216,7 +223,7 @@ SplashActivity extends AppCompatActivity {
                                 finish();
                                 prf.setString("first","true");
                             }else{
-                                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+                                Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
                                 startActivity(intent);
                                 overridePendingTransition(R.anim.enter, R.anim.exit);
                                 finish();
@@ -230,7 +237,7 @@ SplashActivity extends AppCompatActivity {
                             finish();
                             prf.setString("first","true");
                         }else{
-                            Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+                            Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
                             startActivity(intent);
                             overridePendingTransition(R.anim.enter, R.anim.exit);
                             finish();
@@ -247,7 +254,7 @@ SplashActivity extends AppCompatActivity {
                         finish();
                         prf.setString("first","true");
                     }else{
-                        Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+                        Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
                         startActivity(intent);
                         overridePendingTransition(R.anim.enter, R.anim.exit);
                         finish();
@@ -263,7 +270,7 @@ SplashActivity extends AppCompatActivity {
                 finish();
                 prf.setString("first","true");
             }else{
-                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
+                Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.enter, R.anim.exit);
                 finish();

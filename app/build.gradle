@@ -23,8 +23,8 @@ android {
         applicationId "com.ik.videos"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 12
-        versionName "2.1"
+        versionCode 13
+        versionName "2.1.1"
         ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'

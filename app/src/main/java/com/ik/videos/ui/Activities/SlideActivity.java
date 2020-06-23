@@ -4,20 +4,21 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
+
 import com.github.vivchar.viewpagerindicator.ViewPagerIndicator;
-import com.ik.videos.R;
 import com.ik.videos.Adapters.IntroAdapter;
 import com.ik.videos.Provider.PrefManager;
+import com.ik.videos.R;
 import com.ik.videos.ui.view.CarouselEffectTransformer;
 import com.ik.videos.ui.view.ClickableViewPager;
 
@@ -82,7 +83,7 @@ public class SlideActivity extends AppCompatActivity {
                                 finish();
                             }
                         }else{
-                            Intent intent = new Intent(SlideActivity.this,MainActivity.class);
+                            Intent intent = new Intent(SlideActivity.this,LoginActivity.class);
                             startActivity(intent);
                             overridePendingTransition(R.anim.enter, R.anim.exit);
                             finish();

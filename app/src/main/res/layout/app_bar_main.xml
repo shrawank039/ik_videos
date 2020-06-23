@@ -39,11 +39,13 @@ tools:context=".ui.Activities.MainActivity">
         </FrameLayout>
     </LinearLayout>
 </com.google.android.material.appbar.AppBarLayout>
+
 <androidx.viewpager.widget.ViewPager
     android:id="@+id/vp_horizontal_ntb"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
 <devlight.io.library.ntb.NavigationTabBar
     android:id="@+id/ntb_horizontal"
     android:layout_width="match_parent"

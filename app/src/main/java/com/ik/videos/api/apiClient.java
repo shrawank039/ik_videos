@@ -1,7 +1,6 @@
 package com.ik.videos.api;
 
 import android.app.Activity;
-import android.widget.Toast;
 
 import com.ik.videos.App;
 import com.ik.videos.BuildConfig;
@@ -20,7 +19,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import es.dmoral.toasty.Toasty;
 import okhttp3.Cache;
 import okhttp3.CacheControl;
 import okhttp3.Interceptor;
@@ -65,7 +63,7 @@ public class apiClient {
     public static  void setClient(retrofit2.Response<ApiResponse> response, Activity activity, PrefManager prf){
         if (response.isSuccessful()) {
             if (response.body().getCode().equals(202)) {
-                Toasty.error(activity,"17 "+response.body().getMessage(), Toast.LENGTH_LONG).show();
+              //  Toasty.error(activity,"17 "+response.body().getMessage(), Toast.LENGTH_LONG).show();
                // SplashActivity.adapteActivity(activity);
             } else {
                 prf.setString("formatted","true");
