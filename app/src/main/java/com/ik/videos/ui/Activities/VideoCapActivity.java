@@ -6,12 +6,10 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.ik.videos.R;
-import com.ik.videos.RingdroidSelectActivity;
 
 public class VideoCapActivity extends BaseCameraActivity {
     private static final int CAMERA_PERMISSION_REQUEST_CODE = 88888;
@@ -29,13 +27,13 @@ public class VideoCapActivity extends BaseCameraActivity {
         setContentView(R.layout.activity_frag);
         recordBtnAudioTrim = findViewById(R.id.btnAudioTrim);
 
-        recordBtnAudioTrim.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(VideoCapActivity.this, RingdroidSelectActivity.class));
-            }
-        });
+//        recordBtnAudioTrim.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                startActivity(new Intent(VideoCapActivity.this, RingdroidSelectActivity.class));
+//            }
+//        });
 
         onCreateActivity(VideoCapActivity.this);
         videoWidth = 480;

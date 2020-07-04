@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidAudioConverter/AndroidAudioConverter.iml" filepath="$PROJECT_DIR$/AndroidAudioConverter/AndroidAudioConverter.iml" group="IK_Videos-Final/AndroidAudioConverter" />
-      <module fileurl="file://$PROJECT_DIR$/FFmpegSO-master/FFmpegSO-master.iml" filepath="$PROJECT_DIR$/FFmpegSO-master/FFmpegSO-master.iml" group="IK_Videos-Final/FFmpegSO-master" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/IK_Videos-Final.iml" filepath="$PROJECT_DIR$/.idea/modules/IK_Videos-Final.iml" group="IK_Videos-Final" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="IK_Videos-Final/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="IK_Videos-Final/app" />
     </modules>
   </component>
 </project>

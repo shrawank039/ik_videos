@@ -49,6 +49,7 @@ import com.ik.videos.soundfile.SoundFile;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * Main screen that shows up when you launch Ringdroid. Handles selecting
@@ -104,11 +105,10 @@ public class RingdroidSelectActivity
 
         try {
             Intent intent = getIntent();
-            mWasGetContentIntent = intent.getAction().equals(
-                    Intent.ACTION_GET_CONTENT);
+            mWasGetContentIntent = Objects.equals(intent.getAction(), Intent.ACTION_GET_CONTENT);
         } catch (Exception e) {
             e.printStackTrace();
-            // Inflate our UI from its XML layout description.
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
         setContentView(R.layout.media_select);
 
@@ -515,6 +515,8 @@ public class RingdroidSelectActivity
         Cursor c = mAdapter.getCursor();
         int dataIndex = c.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA);
         String filename = c.getString(dataIndex);
+//        int audioName = c.getColumnIndexOrThrow(MediaStore.Audio.Media.DISPLAY_NAME);
+//        String sound_name = c.getString(audioName);
 
         try {
 
@@ -538,6 +540,7 @@ public class RingdroidSelectActivity
             } else {
                 Intent intent=new Intent();
                 intent.putExtra("music_path",filename);
+              //  intent.putExtra("sound_name",sound_name);
                 setResult(7,intent);
                 finish();
             }

@@ -67,6 +67,7 @@ import com.ik.videos.Adapters.LanguageAdapter;
 import com.ik.videos.Adapters.SelectableViewHolder;
 import com.ik.videos.Provider.PrefManager;
 import com.ik.videos.R;
+import com.ik.videos.VideoRecorder.Video_Recoder_A;
 import com.ik.videos.api.apiClient;
 import com.ik.videos.api.apiRest;
 import com.ik.videos.config.Global;
@@ -618,7 +619,8 @@ public class MainActivity extends AppCompatActivity
                 switch (speedDialActionItem.getId()) {
                     case R.id.fab_gif:
                         if (prf.getString("LOGGED").toString().equals("TRUE")){
-                            startActivity(new Intent(MainActivity.this, VideoCapActivity.class));
+                           // startActivity(new Intent(MainActivity.this, VideoCapActivity.class));
+                            startActivity(new Intent(MainActivity.this, Video_Recoder_A.class));
                             overridePendingTransition(R.anim.enter, R.anim.exit);
                         }else{
                             Intent intent= new Intent(MainActivity.this, LoginActivity.class);
@@ -639,6 +641,7 @@ public class MainActivity extends AppCompatActivity
                     case R.id.fab_video:
                         if (prf.getString("LOGGED").toString().equals("TRUE")){
                             startActivity(new Intent(MainActivity.this,UploadVideoActivity.class));
+                  //          startActivity(new Intent(MainActivity.this, Video_Recoder_A.class));
                             overridePendingTransition(R.anim.enter, R.anim.exit);
                         }else{
                             Intent intent= new Intent(MainActivity.this, LoginActivity.class);

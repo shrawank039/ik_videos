@@ -29,15 +29,17 @@ public class App extends MultiDexApplication {
             Timber.plant(new Timber.DebugTree());
         }
         Timber.i("Creating our Application");
+
         AndroidAudioConverter.load(this, new ILoadCallback() {
             @Override
             public void onSuccess() {
                 // Great!
+             //   Toast.makeText(App.this, "Great!", Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onFailure(Exception error) {
                 // FFmpeg is not supported by device
-                Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"aConv -"+error.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }

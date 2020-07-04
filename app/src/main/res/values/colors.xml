@@ -9,6 +9,7 @@
     <color name="primary_text">#212121</color>
 
     <color name="colorAccent">#212121</color>
+    <color name="yellow">#F4B400</color>
     <color name="white">#FFFFFF</color>
     <color name="light_white">#d4d4d4</color>
     <color name="pruple">#a905b6</color>
@@ -41,5 +42,6 @@
     <color name="type_bkgnd_notification">#88666600</color>
     <color name="type_bkgnd_music">#88000000</color>
     <color name="type_bkgnd_unsupported">#88cccccc</color>
+    <color name="fifty_transparent_black">#802F2F2F</color>
 
 </resources>

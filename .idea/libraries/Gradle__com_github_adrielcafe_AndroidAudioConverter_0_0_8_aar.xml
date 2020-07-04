@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.adrielcafe:AndroidAudioConverter:0.0.8@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f3c57dd716600c7b254209117774a29/jetified-AndroidAudioConverter-0.0.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f3c57dd716600c7b254209117774a29/jetified-AndroidAudioConverter-0.0.8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.adrielcafe/AndroidAudioConverter/0.0.8/8041eebfb42002f48839c805ed353bbebba87b2f/AndroidAudioConverter-0.0.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

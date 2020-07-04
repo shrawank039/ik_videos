@@ -57,6 +57,14 @@
             android:value="@string/facebook_app_id" />
         <activity android:name=".ui.Activities.VideoCapActivity"></activity>
         <activity
+            android:name=".VideoRecorder.Video_Recoder_A"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="false"/>
+        <activity
+            android:name=".VideoRecorder.Preview_Video_A"
+            android:screenOrientation="portrait"
+            android:theme="@style/black_status" />
+        <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />

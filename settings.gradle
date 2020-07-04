@@ -1,1 +1,1 @@
-include ':app', ':AndroidAudioConverter', ':FFmpegSO-master'
+include ':app'  //, ':AndroidAudioConverter', ':FFmpegSO-master'

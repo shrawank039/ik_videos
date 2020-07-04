@@ -1,5 +1,6 @@
 package com.ik.videos;
 
+
 import android.content.Context;
 import android.os.Environment;
 import android.util.Log;
@@ -141,6 +142,26 @@ public class VideoCompressor {
                 listener.onFailure("Error : " + e.getMessage());
             }
         }
+
+//        int rc = com.arthenica.mobileffmpeg.FFmpeg.execute("-i file1.mp4 -c:v mpeg4 file2.mp4");
+//        if (rc == RETURN_CODE_SUCCESS) {
+//            status = SUCCESS;
+//            Log.e("VideoCronProgress", "finnished");
+//            isFinished = true;
+//            if (listener != null) {
+//                listener.compressionFinished(status, true, outputFilePath);
+//            }
+//        } else if (rc == RETURN_CODE_CANCEL) {
+//            Log.i(Config.TAG, "Command execution cancelled by user.");
+//        } else {
+//            Log.i(Config.TAG, String.format("Command execution failed with rc=%d and the output below.", rc));
+//            Config.printLastCommandOutput(Log.INFO);
+//            status = FAILED;
+//            Log.e("VideoCompressor", "failed");
+//            if (listener != null) {
+//                listener.onFailure("Error : " + "Failed");
+//            }
+//        }
     }
 
     public interface CompressionListener {
